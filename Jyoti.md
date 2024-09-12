@@ -247,5 +247,3 @@ Here are the references used in the project, detailing the studies and technolog
 These references provide the foundational knowledge and background that support the design, implementation, and potential future improvements of the system.
 
 ---
-
-This version includes detailed explanations and uses a table format where appropriate to clearly present the future enhancements and references, making it comprehensive and easy to understand. Let me know if you need further adjustments or additions!
