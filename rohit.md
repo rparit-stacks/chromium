@@ -75,6 +75,108 @@ The block diagram provides a clear overview of the system’s architecture, show
 
 # UseCase Diagram
 ![Untitled (8)](https://github.com/user-attachments/assets/9e92c29c-046a-407c-9d45-38753bc80eb8)
+The use case diagram of the Tic Tac Toe game app illustrates the interactions between the users (players) and the system’s various functionalities. It highlights the primary actions that can be performed within the app, demonstrating the roles of the players and the system’s responses.
+
+#### **Components of the Use Case Diagram:**
+
+1. **Actors:**
+   - **Player 1 and Player 2**: Represent the two participants who interact with the game. These actors are involved in starting the game, making moves, and interacting with the game system through the app interface.
+
+2. **Use Cases:**
+   - **Start Game**:
+     - **Description**: This use case allows players to initiate a new game session. It resets the board, scores, and sets the game status to active.
+     - **Interactions**: Both Player 1 and Player 2 can trigger this action to begin a new match.
+
+   - **Make a Move**:
+     - **Description**: Represents the core gameplay action where a player makes a move by tapping on a grid cell.
+     - **Interactions**: Both players alternate making moves until a win condition or draw is achieved.
+
+   - **Check Win Conditions**:
+     - **Description**: The system automatically checks the board after each move to determine if there is a winner or if the game ends in a draw.
+     - **Interactions**: This is a system-triggered action that responds to each player’s move.
+
+   - **Update Game Status**:
+     - **Description**: Updates the game’s current status, such as displaying which player's turn it is, declaring a winner, or showing a draw.
+     - **Interactions**: This use case is managed by the system and displayed on the screen for both players.
+
+   - **Display Scores**:
+     - **Description**: Shows the current scores of both players, updating after each game session.
+     - **Interactions**: The system maintains and updates this display after each game concludes.
+
+   - **Exit Game**:
+     - **Description**: Allows players to exit the current game session and return to the main menu or quit the app.
+     - **Interactions**: Both players can use this option to terminate the session at any time.
+
+   - **Provide Vibration Feedback**:
+     - **Description**: Enhances the gameplay experience by providing tactile feedback when a player makes a move or when the game concludes.
+     - **Interactions**: Triggered automatically by the system in response to game actions.
+
+3. **Relationships:**
+   - **Player Interactions**: Both players interact with the core functionalities such as making moves, starting the game, and exiting.
+   - **System Responses**: The system manages feedback mechanisms such as checking win conditions, updating the status, displaying scores, and providing vibration feedback.
+
+#### **Purpose of the Use Case Diagram:**
+- The use case diagram provides a high-level view of how the Tic Tac Toe game functions from the user's perspective. It helps developers and stakeholders understand the primary interactions within the app, ensuring that all expected functionalities are accounted for during development.
+- It serves as a blueprint for building user-centric features, enhancing the app’s usability, and ensuring a seamless player experience.
+
+
 
 # DFD
 ![image](https://github.com/user-attachments/assets/5a27f463-454e-4395-af2c-26aa4a324ce6)
+
+The Data Flow Diagram (DFD) of the Tic Tac Toe game app illustrates the flow of data within the system, highlighting how information moves between the various components and processes. The DFD provides a clear representation of how user inputs are handled, processed, and outputted, ensuring a smooth functioning of the game.
+
+#### **Components of the Data Flow Diagram:**
+
+1. **External Entities:**
+   - **Player 1 and Player 2**:
+     - **Description**: These entities represent the users interacting with the game. They provide inputs in the form of moves and receive outputs such as game status updates, vibration feedback, and scores.
+
+2. **Processes:**
+   - **1.0 Start Game**:
+     - **Description**: This process is triggered when the players choose to start a new game session. It initializes the game board, resets scores, and sets the game status to active.
+     - **Data Flow**: Receives a start command from the players and sends a reset signal to the game board.
+
+   - **2.0 Make a Move**:
+     - **Description**: Handles the player's actions when they make a move by tapping on the game grid. It captures the input and sends it to the game logic.
+     - **Data Flow**: Receives player input (move) and updates the game state accordingly.
+
+   - **3.0 Check Win Conditions**:
+     - **Description**: After each move, this process evaluates the current state of the board to check if a winning condition is met or if the game has ended in a draw.
+     - **Data Flow**: Takes the updated game state from the previous process and determines the outcome.
+
+   - **4.0 Update Game Status**:
+     - **Description**: Updates the status display for the players, showing whose turn it is, who won, or if the game is a draw.
+     - **Data Flow**: Receives results from the win-check process and updates the display.
+
+   - **5.0 Display Scores**:
+     - **Description**: Manages the score display, showing the current scores of Player 1 and Player 2.
+     - **Data Flow**: Updates scores based on the results of each game session and sends this data to the display.
+
+   - **6.0 Provide Vibration Feedback**:
+     - **Description**: Provides tactile feedback in the form of vibrations when moves are made or when the game concludes.
+     - **Data Flow**: Receives signals based on game events and triggers vibrations.
+
+   - **7.0 Exit Game**:
+     - **Description**: Allows players to exit the current game session and return to the main menu or quit the app.
+     - **Data Flow**: Receives an exit command from the players and stops the game processes.
+
+3. **Data Stores:**
+   - **D1: Game State**:
+     - **Description**: Stores the current state of the game, including player positions on the grid and game status.
+     - **Interactions**: Updated after each move and referenced when checking win conditions.
+
+   - **D2: Player Scores**:
+     - **Description**: Maintains the scores of both players across game sessions.
+     - **Interactions**: Updated after each game session and displayed to the players.
+
+4. **Data Flows:**
+   - **Player Input to Make a Move**: Data flows from the players to the process that handles their moves.
+   - **Game State Updates**: Moves data between the processes to maintain the current state and status of the game.
+   - **Score Updates**: Data flows from game processes to the score display component to keep the scores current.
+   - **Vibration Feedback**: Data flows from the system to provide physical feedback based on game events.
+
+#### **Purpose of the Data Flow Diagram:**
+- The DFD provides a detailed overview of how data moves within the Tic Tac Toe game app. It helps developers understand the internal workflow of the system, ensuring that each component receives and processes data correctly.
+- It highlights the interactions between user actions and system responses, ensuring that the data architecture is efficient and logically structured.
+
