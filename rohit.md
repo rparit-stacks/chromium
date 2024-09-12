@@ -36,9 +36,42 @@ This Tic Tac Toe app is designed to provide a quick, engaging, and satisfying ga
 
 ---
 
-
 # Block Diagram
 ![image](https://github.com/user-attachments/assets/caa64e2d-544d-4276-9048-ca523653e947)
+
+The block diagram of the Tic Tac Toe game app visually represents the key components and their interactions within the application. Each block signifies a major part of the system, highlighting how the game's core functionalities are structured and interlinked.
+
+#### **Components of the Block Diagram:**
+
+1. **User Input (Taps/Clicks)**
+   - **Description**: This block represents the input actions from the players, such as tapping or clicking on the game board to make a move.
+   - **Functionality**: It captures the player's move and sends it to the game logic for processing.
+
+2. **Game Logic (Handles Moves, Win Conditions)**
+   - **Description**: This is the core processing unit of the game, responsible for managing moves, checking for win conditions, and updating the game state.
+   - **Functionality**: It validates each move, updates the board state, and checks whether any player has won, lost, or if the game is a draw.
+
+3. **Vibration System (Feedback on Moves)**
+   - **Description**: This component provides haptic feedback to the players after each move, enhancing the user experience with physical vibrations.
+   - **Functionality**: It triggers short vibrations for regular moves and longer vibrations for winning or losing scenarios.
+
+4. **UI Components (Board, Scores, Status Display)**
+   - **Description**: This block covers the visual elements of the game, including the Tic Tac Toe grid, score display, and status messages (e.g., whose turn it is).
+   - **Functionality**: It updates the display according to the game state, showing moves on the grid, current scores, and game status messages.
+
+5. **Score Storage (SharedPreferences)**
+   - **Description**: This component handles the storage of players' scores using the device’s local storage, specifically SharedPreferences.
+   - **Functionality**: It keeps track of the scores between game sessions, allowing players to see their progress over time.
+
+#### **Overall Workflow:**
+- Players interact with the app through taps and clicks, which are processed by the Game Logic.
+- The Game Logic updates the game state based on the moves, checks for win conditions, and communicates with the UI Components to update the display.
+- Vibration feedback is provided after each move to enhance the player's engagement.
+- Scores are updated and stored in the Score Storage component, ensuring continuity between sessions.
+
+### **Purpose of the Block Diagram:**
+The block diagram provides a clear overview of the system’s architecture, showing how user actions are processed and reflected in the game. It helps developers understand the flow of data and the interaction between different components, ensuring that each part functions cohesively within the overall system.
+
 
 # UseCase Diagram
 ![Untitled (8)](https://github.com/user-attachments/assets/9e92c29c-046a-407c-9d45-38753bc80eb8)
